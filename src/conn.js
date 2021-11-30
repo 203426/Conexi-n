@@ -32,8 +32,8 @@ function mostrarTabla() {
     });
 }
 
-function agregar() {
-    $query = 'SELECT * from usuarios';
+function agregar(nombre, num) {
+    $query = 'INSERT INTO usuarios(nombre,num) values ("'+nombre+'",'+num+');';
 
     connection.query($query, function(err, rows, fields) {
         if(err){
@@ -45,7 +45,24 @@ function agregar() {
     });
 }
 
+function eliminar(id) {
+    $query = 'delete from usuarios where id='+id+';';
+
+    connection.query($query, function(err, rows, fields) {
+        if(err){
+            console.log("An error ocurred performing the query.");
+            return;
+        }
+
+        console.log("Consulta ejecutada con éxito:", rows);
+    });
+}
+
+
 // Cerrar la conexión
+//agregar()
+//eliminar()
+mostrarTabla()
 connection.end(function(){
     // La conexión se ha cerrado
 });

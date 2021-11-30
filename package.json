@@ -1,0 +1,22 @@
+{
+  "name": "conexi-n",
+  "version": "1.0.0",
+  "description": "",
+  "main": "conn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/203426/Conexi-n.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/203426/Conexi-n/issues"
+  },
+  "homepage": "https://github.com/203426/Conexi-n#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

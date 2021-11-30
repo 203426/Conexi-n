@@ -32,7 +32,9 @@ function mostrarTabla() {
     });
 }
 
-function agregar(nombre, num) {
+function agregar() {
+    var num = document.getElementById("num");
+    var nombre = document.getElementById("nombre");
     $query = 'INSERT INTO usuarios(nombre,num) values ("'+nombre+'",'+num+');';
 
     connection.query($query, function(err, rows, fields) {
@@ -40,7 +42,7 @@ function agregar(nombre, num) {
             console.log("An error ocurred performing the query.");
             return;
         }
-
+        console.log("Nombre: ",nombre," Num: ",num);
         console.log("Consulta ejecutada con éxito:", rows);
     });
 }
